@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="SpajzNyersanyagHozzaadViewModel"
+            type="com.nmb.e_pantry.spajz.spajznyersanyaghozzaad.SpajzNyersanyagHozzaadViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/h_top_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.02" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/name_til"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:hint="@string/név"
+            app:errorEnabled="true"
+            app:layout_constraintBottom_toTopOf="@id/h_guideline"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/h_top_guideline">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/name_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/h_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.17" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/f_menny_til"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:hint="@string/figyelmeztetés"
+            android:paddingTop="5dp"
+            app:errorEnabled="true"
+            app:layout_constraintBottom_toTopOf="@id/h_guideline2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/v_guideline"
+            app:layout_constraintTop_toBottomOf="@id/h_guideline">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/f_menny_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:inputType="number|numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Spinner
+            android:id="@+id/mertek_spinner"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:entries="@{SpajzNyersanyagHozzaadViewModel.onStart()}"
+            app:layout_constraintBottom_toTopOf="@id/h_guideline2"
+            app:layout_constraintLeft_toRightOf="@id/v_guideline"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/h_guideline" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ar_til"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:hint="@string/Ar"
+            app:errorEnabled="true"
+            app:layout_constraintBottom_toTopOf="@id/h_guideline4"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/v_guideline"
+            app:layout_constraintTop_toBottomOf="@id/h_guideline2">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ar_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/h_guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.34" />
+
+        <Button
+            android:id="@+id/hozzaad_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/hozzáad"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/h_guideline4" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/h_guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.51" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/v_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.7" />
+
+        <TextView
+            android:id="@+id/ár_tw"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:text="@string/ft"
+            app:layout_constraintBottom_toTopOf="@id/h_guideline4"
+            app:layout_constraintLeft_toRightOf="@id/v_guideline"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/h_guideline2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:title="Spájz">
+            <menu>
+                <group
+                    android:id="@+id/spájz"
+                    android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/s_megtekint"
+                        android:title="Spájz megtekintése" />
+                    <item
+                        android:id="@+id/s_hozzáad"
+                        android:title="Spájz módosítása" />
+                    <item
+                        android:id="@+id/s_nyers_hozzáad"
+                        android:title="Elem hozzáadása" />
+                    <item
+                        android:id="@+id/s_nyers_modosit"
+                        android:title="Elem módosítása" />
+                </group>
+            </menu>
+        </item>
+        <item android:title="Recept">
+            <menu>
+                <group
+                    android:id="@+id/recept"
+                    android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/r_megtekint"
+                        android:title="Receptek megtekintése" />
+                    <item
+                        android:id="@+id/r_hozzáad"
+                        android:title="Recept hozzáadása" />
+                </group>
+            </menu>
+        </item>
+        <item android:title="Bevásárlólista">
+            <menu>
+                <group
+                    android:id="@+id/bevásárlólista"
+                    android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/b_megtekint"
+                        android:title="Bevásárlólista megtekintése" />
+                    <item
+                        android:id="@+id/b_hozzáad"
+                        android:title="Elemek hozzáadása" />
+                    <item
+                        android:id="@+id/b_hozzáad_recceptből"
+                        android:title="Elemek hozzáadása receptből" />
+                </group>
+            </menu>
+        </item>
+    </group>
+</menu>

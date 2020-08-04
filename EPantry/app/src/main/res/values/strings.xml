@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">EPantry</string>
+    <string name="Welcome_text">Üdvözöllek az E-Pantry alkalmazásban</string>
+    <string name="mennyiség">Mennyiség</string>
+    <string name="hozzáad">Hozzáad</string>
+    <string name="elvesz">Elvesz</string>
+    <string name="név">Név</string>
+    <string name="figyelmeztetés">Figyelmeztetési mennyiség</string>
+    <string name="recept_neve">Recept neve</string>
+    <string name="töröl">Utolsó törlése</string>
+    <string name="recept_hozzaad">Recept hozzáadása</string>
+    <string name="Ar">Ár</string>
+    <string name="megtekint">Megtekint</string>
+    <string name="kivalaszt">Kiválaszt</string>
+    <string name="koltseg_text">A bevásárlólista költsége: 0 Ft</string>
+    <string name="ft">Ft</string>
+    <string name="modosit">Módosít</string>
+    <string name="nyersanyag">Nyersanyag</string>
+    <string name="kihagy">Nem akarok értesítést kappni erről a nyersanyagról.</string>
+</resources>

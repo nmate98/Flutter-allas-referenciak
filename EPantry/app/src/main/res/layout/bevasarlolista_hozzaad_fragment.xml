@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="BevasarlolistaHozzaadViewModel"
+            type="com.nmb.e_pantry.bevasarlolista.bevasarlolistahozzaad.BevasarlolistaHozzaadViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/spajzRecyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/h_guideline1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nyersanyag_til"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:hint="@string/nyersanyag"
+            app:errorEnabled="true"
+            android:paddingTop="5dp"
+            app:layout_constraintBottom_toTopOf="@id/h_guideline2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/h_guideline1">
+
+            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                android:id="@id/nyersanyag_atv"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                />
+        
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/mennyiseg_til"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/mennyiség"
+            app:errorEnabled="true"
+            app:layout_constraintBottom_toTopOf="@id/h_guideline3"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/v_guideline"
+            app:layout_constraintTop_toBottomOf="@id/h_guideline2">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/mennyiseg_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number|numberDecimal"  />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/hozzaad_button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="@string/hozzáad"
+            app:layout_constraintBottom_toTopOf="@id/h_guideline4"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/h_guideline3" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/bevlistaRecyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/h_guideline4" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/v_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.7" />
+
+        <TextView
+            android:id="@+id/mertekegyseg_textview"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            app:layout_constraintBottom_toTopOf="@id/hozzaad_button"
+            app:layout_constraintLeft_toRightOf="@id/v_guideline"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nyersanyag_til" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/h_guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.32" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/h_guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.47" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/h_guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.60" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/h_guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.67" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

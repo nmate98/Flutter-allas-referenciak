@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="SpajzModositViewModel"
+            type="com.nmb.e_pantry.spajz.spajzmodosit.SpajzModositViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/h_top_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.02" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/h_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.17" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/h_guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.32" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nyersanyag_til"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:hint="@string/nyersanyag"
+            android:paddingTop="5dp"
+            app:errorEnabled="true"
+            app:layout_constraintBottom_toTopOf="@id/h_guideline"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/h_top_guideline">
+
+            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/nyersanyag_atv"
+                android:layout_width="match_parent"
+                android:layout_height="45dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/v_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/mennyiseg_til"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:hint="@string/mennyiség"
+            app:errorEnabled="true"
+            app:layout_constraintBottom_toTopOf="@id/h_guideline2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/v_guideline2"
+            app:layout_constraintTop_toBottomOf="@id/h_guideline">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/mennyiseg_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:layout_weight="1"
+                android:inputType="number|numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/v_guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.8" />
+
+        <TextView
+            android:id="@+id/mertekegyseg_text"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            app:layout_constraintBottom_toTopOf="@id/h_guideline2"
+            app:layout_constraintLeft_toRightOf="@id/v_guideline2"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/h_guideline" />
+
+        <Button
+            android:id="@+id/hozzaad_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/hozzáad"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/elvesz_button"
+            app:layout_constraintTop_toBottomOf="@id/h_guideline2" />
+
+        <Button
+            android:id="@+id/elvesz_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/elvesz"
+            app:layout_constraintLeft_toRightOf="@id/hozzaad_button"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/h_guideline2" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

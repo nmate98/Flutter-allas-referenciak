@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/startFragment">
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.nmb.e_pantry.start.StartFragment"
+        android:label="Kezdőlap">
+        <action
+            android:id="@+id/action_startFragment_to_spajzHozzaadFragment"
+            app:destination="@id/spajzHozzaadFragment"
+            app:popUpTo="@+id/startFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/spajzMegtekintFragment"
+        android:name="com.nmb.e_pantry.spajz.spajzmegtekint.SpajzMegtekintFragment"
+        android:label="Spájz megtekintése" />
+    <fragment
+        android:id="@+id/spajzHozzaadFragment"
+        android:name="com.nmb.e_pantry.spajz.spajzmodosit.SpajzModositFragment"
+        android:label="Spájz módosítása">
+        <argument
+            android:name="id"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/receptMegtekintFragment"
+        android:name="com.nmb.e_pantry.recept.receptmegtekint.ReceptMegtekintFragment"
+        android:label="Receptek megtekintése" />
+    <fragment
+        android:id="@+id/receptHozaadFragment"
+        android:name="com.nmb.e_pantry.recept.recepthozzaad.ReceptHozzaadFragment"
+        android:label="Új recept" />
+    <fragment
+        android:id="@+id/bevasarlolistaMegtekintFragment"
+        android:name="com.nmb.e_pantry.bevasarlolista.bevasarlolistamegtekint.BevasarlolistaMegtekintFragment"
+        android:label="Bevásárlólista megtekintése" />
+    <fragment
+        android:id="@+id/bevasarlolistaHozzaadFragment"
+        android:name="com.nmb.e_pantry.bevasarlolista.bevasarlolistahozzaad.BevasarlolistaHozzaadFragment"
+        android:label="Bevásárlólistához hozzáadás" />
+    <fragment
+        android:id="@+id/spajzNyersanyagHozzaadFragment"
+        android:name="com.nmb.e_pantry.spajz.spajznyersanyaghozzaad.SpajzNyersanyagHozzaadFragment"
+        android:label="Új nyersanyag" />
+    <fragment
+        android:id="@+id/bevasarlolistaHozzadReceptbolFragment"
+        android:name="com.nmb.e_pantry.bevasarlolista.bevasarlolistahozzaadreceptbol.BevasarlolistaHozzaadReceptbolFragment"
+        android:label="Recept hozzáadása listához" />
+    <fragment
+        android:id="@+id/spajzNyersanyagModositFragment"
+        android:name="com.nmb.e_pantry.spajz.spajznyersanyagmodosit.SpajzNyersanyagModositFragment"
+        android:label="Nyersanyag módosítása" />
+</navigation>
